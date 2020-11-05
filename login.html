@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>dataBASE Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+   <!-- <<  << NAV SECTION >>  >> -->
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a href="index.html"><img src="images/minilogo.png" alt="Logo" class="navbar-brand"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="signup.html">Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="faq.html">FAQ's</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Exit Points
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a id="montserrat" class="dropdown-item" href="#" onclick="getData('41.5935439', '1.8373248')">Montserrat</a>
+            <a id="monteBrento" class="dropdown-item" href="#" onclick="getData('45.9874709', '10.8958033')">Monte Brento</a>
+            <a id="huesca" class="dropdown-item" href="#" onclick="getData('42.306195', '-0.047181')">Huesca</a>
+            <a id="millau" class="dropdown-item" href="#" onclick="getData('44.077178', '3.019188')">Millau</a>
+            <a id="midiDOssau" class="dropdown-item" href="#" onclick="getData('42.843056', '-0.438056')">Midi D'Ossau</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+    <!-- <<  << HEADER SECTION >>  >> -->
+
+    <section class="login-header">
+      <div class="header-bg"></div>
+      <div class="header-text">
+        <h1>dataBASE</h1>
+        <p>All your BETA and all the weather information in one place.</p>
+      </div>
+    </section>
+
+    
+
+    <main>
+
+      <section class="login">
+        <h2>Login</h2>
+        
+        <div class="form-wrapper">
+
+          <form class="login-form" action="">
+            <input type="email" id="email" placeholder="Email" />
+            <input type="password" id="password" placeholder="****" />
+
+            <button type="submit" class="button" id="login-button">
+              Login
+            </button>
+
+          </form>
+
+
+          <div class="message-container"></div>
+
+        </div>
+      </section>
+    </main>
+    <script src="scripts/Login.js"></script>
+    <script src="scripts/Database.js"></script>
+
+    
+  </body>
+</html>

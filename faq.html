@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <title>dataBASE FAQ's</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <!-- <<  << NAV SECTION >>  >> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a href="index.html"><img src="images/minilogo.png" alt="Logo" class="navbar-brand"/></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html">FAQ's</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Exit Points
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a id="montserrat" class="dropdown-item" href="#" onclick="getData('41.5935439', '1.8373248')">Montserrat</a>
+              <a id="monteBrento" class="dropdown-item" href="#" onclick="getData('45.9874709', '10.8958033')">Monte Brento</a>
+              <a id="huesca" class="dropdown-item" href="#" onclick="getData('42.306195', '-0.047181')">Huesca</a>
+              <a id="millau" class="dropdown-item" href="#" onclick="getData('44.077178', '3.019188')">Millau</a>
+              <a id="midiDOssau" class="dropdown-item" href="#" onclick="getData('42.843056', '-0.438056')">Midi D'Ossau</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- <<  << HEADER SECTION >>  >> -->
+
+    <section class="login-header">
+      <div class="header-bg"></div>
+      <div class="header-text">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <h1 class="animate__animated animate__backInDown">dataBASE</h1>
+        <p class="animate__animated animate__bounce">All your BETA and all the weather information in one place.</p>
+      </div>
+    </section>
+
+    <div>
+      <p>
+        <h2 class="animate__animated animate__backInDown">FAQ'S</h2>
+        <br>
+        <h3 class="animate__animated animate__backInDown">What is BASE Jumping?</h3>
+        <br>
+        <p class="animate__animated animate__bounce">BASE jumping is a recreational activity that incorporates jumping from a tall fixed object and then opening a parachute to safely descend to the ground. BASE is an acronym for the four types of structures that BASE jumpers commonly leap from.
+          B is for building, A is for antenna, S is for Span (a bridge) and E is for earth (a cliff).</p>
+        <br>
+        <h3 class="animate__animated animate__backInDown">What kind of people BASE jump?</h3>
+        <br>
+        <p class="animate__animated animate__bounce">BASE jumping attracts the widest range of people with varied personalities, occupations, families, hobbies, social backgrounds, ethnicity, culture and character. There are no stereotypes when it comes to BASE jumping. A common trait in all jumpers is a desire for adventure.</p>
+        <br>
+        <h3 class="animate__animated animate__backInDown">How Dangerous is BASE Jumping?</h3>
+        <br>
+        <p class="animate__animated animate__bounce">The potential dangers in BASE are obvious and very real. BASE jumping is all about minimising the risk so that it can be successfully done over and over again. The real risks come down to the actually people doing it and how they go about it. Experienced BASE jumpers generally have no problem overcoming the risks by implementing adequate risk management techniques. This starts with ensuring you have the sufficient knowledge and skill and are using the right equipment. To maintain a maximum level of safety BASE jumps should always be done with a high level of caution and a BASE jumper also should not try to push beyond their skill level. BASE jumping should be done regularly to maintain your skillset. For those that are overconfident or reckless or have insufficient knowledge and skills then it is only a matter of time before they get seriously injured or killed. Those people that stand out as thrill seekers or have an appetite for high risk are not really suitable for this sport.</p>
+      </p>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="scripts/dataBASEApi.js"></script>
+  </body>
+</html>

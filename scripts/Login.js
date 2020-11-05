@@ -42,7 +42,7 @@ class Login {
 
   redirect = () => {
     setTimeout( function () {
-      location.assign("dashboard.html")
+      location.assign("index.html")
     }, 2000)
   }
 

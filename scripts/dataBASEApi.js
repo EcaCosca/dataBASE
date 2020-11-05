@@ -1,9 +1,12 @@
 const url = 'https://fcc-weather-api.glitch.me/api/current?'
 
-async function getData(lat, lon) {
+async function getData(lat, lon, maps) {
   const weatherDiv = document.querySelector("#weather");
+  const mapsInfo= document.querySelector('#maps');
+
   weatherDiv.innerHTML = "";
- 
+  // mapsInfo.innerHTML="";
+
   try {
     const response = await fetch(`${url}lat=${lat}&lon=${lon}`);
     console.log("response", response);
@@ -16,6 +19,8 @@ async function getData(lat, lon) {
       weatherh2tagProve.className = 'animate__animated animate__backInDown';
       weatherh2tagProve.textContent = `Sorry, please try again.`
       weatherDiv.appendChild(weatherh2tagProve);
+      // mapsInfo.innerHTML='';
+
     } else {
       // < < WEATHER DESCRIPTION > >
       const weatherStatus = dataAPI.weather[0].description;
@@ -82,6 +87,11 @@ async function getData(lat, lon) {
       const pressure = document.createElement("p");
       pressure.textContent = `Preassure: ${pressureAPI} mb`
       weatherDiv.appendChild(pressure);
+
+      // < < MAPS > >
+      const mapsDisplay = document.createElement("div");
+      mapsDisplay.innerHTML = `<iframe src="${maps}" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>`
+      weatherDiv.appendChild(mapsDisplay);
 
     }
 

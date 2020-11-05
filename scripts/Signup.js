@@ -1,6 +1,6 @@
 class Signup {
   constructor() {
-    // store all of the input elements
+    // <<  STORE ALL INPUT ELEMENTS>>
     this.nameInput = document.querySelector("#name");
     this.emailInput = document.querySelector("#email");
     this.passwordInput = document.querySelector("#password");
@@ -9,7 +9,7 @@ class Signup {
     this.errorsWrapper = document.querySelector(".message-container");
   }
 
-// <<  EMAIL INPUT  >>
+  // <<  EMAIL INPUT  >>
   handleEmailInput = (event) => {
     const emailInput = event.target;
     const email = emailInput.value;

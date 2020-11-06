@@ -1,6 +1,6 @@
 const url = 'https://fcc-weather-api.glitch.me/api/current?'
 
-async function getData(lat, lon, maps) {
+async function getData(locationName, lat, lon, maps) {
   const weatherDiv = document.querySelector("#weather");
   const mapsInfo= document.querySelector('#maps');
 
@@ -22,9 +22,15 @@ async function getData(lat, lon, maps) {
       // mapsInfo.innerHTML='';
 
     } else {
+      // < < LOCATION NAME > >
+      const locationNameh2Tag = document.createElement("h2");
+      locationNameh2Tag.className = 'animate__animated animate__flash';
+      locationNameh2Tag.textContent = locationName.toUpperCase ();
+      weatherDiv.appendChild(locationNameh2Tag);
+
       // < < WEATHER DESCRIPTION > >
       const weatherStatus = dataAPI.weather[0].description;
-      const weatherh2tag = document.createElement("h2");
+      const weatherh2tag = document.createElement("h3");
       weatherh2tag.className = 'animate__animated animate__backInDown';
       weatherh2tag.textContent = weatherStatus.toUpperCase ();
       weatherDiv.appendChild(weatherh2tag);
@@ -101,32 +107,3 @@ async function getData(lat, lon, maps) {
     console.log(err);
   }
 }
-
-
-
-
-
-
-// const mapsDiv = document.querySelector("#maps");
-// mapsDiv.innerHTML = "";
-
-// document.querySelector("#montserrat").addEventListener("click", mapsAppear);
-
- 
-// function mapsAppear () {
-//   let montserratMap = `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2983.8769861005367!2d1.8373248!3d41.59354390000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDM1JzM2LjgiTiAxwrA1MCcxNC40IkU!5e0!3m2!1ses-419!2ses!4v1604535163545!5m2!1ses-419!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>`;
-//   mapsDiv.innerHTML = montserratMap;
-
-// }
-
-// id="monteBrento"
-// <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2772.188228760602!2d10.895803299999999!3d45.9874709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDU5JzE0LjkiTiAxMMKwNTMnNDQuOSJF!5e0!3m2!1ses-419!2ses!4v1604545790863!5m2!1ses-419!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-
-// id="huesca"
-// <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.703344746244!2d-0.049369684953844896!3d42.30619497919053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDE4JzIyLjMiTiAwwrAwMic0OS45Ilc!5e0!3m2!1ses-419!2ses!4v1604545946086!5m2!1ses-419!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-
-// id="millau"
-// <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2866.2991917850513!2d3.0169993151148105!3d44.07717797910907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b24a26901e27d1%3A0xd68c6a0fa2bec6e4!2sViaducto%20de%20Millau!5e0!3m2!1ses-419!2ses!4v1604546226855!5m2!1ses-419!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-
-// id="midiDOssau"
-// <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11700.32848970623!2d-0.44208806824446384!3d42.84999911651021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5797e9a44e5e9f%3A0xe0ec96d39801b9df!2sPico%20de%20Midi%20d&#39;Ossau!5e0!3m2!1ses-419!2ses!4v1604546303922!5m2!1ses-419!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>

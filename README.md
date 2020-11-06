@@ -1,6 +1,6 @@
 # dataBASE - M1 Project
 ​
-![](https://res.cloudinary.com/martajank/image/upload/v1604060649/mm3617345_tw2jpl.jpg)
+![](https://res.cloudinary.com/dbggt3o28/image/upload/v1604589044/dataBASELogo_zryvo1.png)
 ​
 ​
 ## Description

@@ -72,21 +72,17 @@ class Signup {
 
     // <<  GET VALUE OF EACH INPUT  >>
     const name = this.nameInput.value;
-    const pokemon = this.pokemonInput.value;
-    const type = this.typeInput.value;
     const email = this.emailInput.value;
     const password = this.passwordInput.value;
 
     // <<  NEW USER  >>
-    const newUser = new User(name, pokemon, type, email, password);
+    const newUser = new User(name, email, password);
 
     // <<  PUSH TO DATABASE  >>
     db.saveNewUser(newUser);
 
     // <<  EMPTY INPUTS  >>
     this.nameInput.value = "";
-    this.pokemonInput.value = "";
-    this.typeInput.value = "";
     this.emailInput.value = "";
     this.passwordInput.value = "";
   };
